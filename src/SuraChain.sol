@@ -6,12 +6,17 @@ error AlreadyVoted();
 error InvalidCandidate();
 
 contract SuraChain {
+    // --- Structs ---
+    struct Candidate {
+        uint8 id;
+        address candidateAddress;
+        uint16 votesReceived;
+    }
+
     // --- State Variables ---
     string public constant NAME = "SuraChain";
     uint16 public totalVotes;
-    mapping(address => bool) public isCandidate;
     mapping(address => bool) public hasVoted;
-    mapping(address => uint16) public votesReceived;
-
+    mapping(uint8 => Candidate) public candidates;
 
 }
