@@ -1,14 +1,17 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-contract Counter {
-    uint256 public number;
+// Custom error
+error AlreadyVoted();
+error InvalidCandidate();
 
-    function setNumber(uint256 newNumber) public {
-        number = newNumber;
-    }
+contract SuraChain {
+    // --- State Variables ---
+    string public constant NAME = "SuraChain";
+    uint16 public totalVotes;
+    mapping(address => bool) public isCandidate;
+    mapping(address => bool) public hasVoted;
+    mapping(address => uint16) public votesReceived;
 
-    function increment() public {
-        number++;
-    }
+
 }
