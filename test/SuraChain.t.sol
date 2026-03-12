@@ -27,7 +27,7 @@ contract SuraChainTest is Test {
 
         assertEq(suraChain.totalVotes(), 1);
         assertEq(suraChain.hasVoted(voter1), true);
-        (, , uint16 votes) = suraChain.candidates(1);
+        (,, uint16 votes) = suraChain.candidates(1);
         assertEq(votes, 1);
     }
 
