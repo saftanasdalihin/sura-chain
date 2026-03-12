@@ -22,6 +22,9 @@ contract SuraChain {
     // --- Constructor ---
     constructor() {
         // Initialize candidates
+        candidates[1] = Candidate(1, address(0x111), 0);
+        candidates[2] = Candidate(2, address(0x222), 0);
+        candidates[3] = Candidate(3, address(0x333), 0);
     }
 
     // --- Events ---
