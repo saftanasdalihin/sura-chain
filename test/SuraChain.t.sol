@@ -15,7 +15,7 @@ contract SuraChainTest is Test {
     }
 
     // --- Test Initial State ---
-    function testInitialState() public {
+    function testInitialState() public view {
         assertEq(suraChain.NAME(), "SuraChain");
         assertEq(suraChain.totalVotes(), 0);
     }
@@ -27,7 +27,7 @@ contract SuraChainTest is Test {
 
         assertEq(suraChain.totalVotes(), 1);
         assertEq(suraChain.hasVoted(voter1), true);
-        (uint8 id, address addr, uint16 votes) = suraChain.candidates(1);
+        (, , uint16 votes) = suraChain.candidates(1);
         assertEq(votes, 1);
     }
 
