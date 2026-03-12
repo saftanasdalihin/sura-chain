@@ -43,5 +43,4 @@ contract SuraChain {
         totalVotes++;
         emit VoteCast(msg.sender, candidateId);
     }
-
 }
