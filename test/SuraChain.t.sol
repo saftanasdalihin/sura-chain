@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import "forge-std/Test.sol";
-import "../src/SuraChain.sol";
+import {Test} from "forge-std/Test.sol";
+import {SuraChain, AlreadyVoted, InvalidCandidate} from "../src/SuraChain.sol";
 
 contract SuraChainTest is Test {
     SuraChain public suraChain;
@@ -12,6 +12,7 @@ contract SuraChainTest is Test {
 
     function setUp() public {
         suraChain = new SuraChain();
+        suraChain.openElection();
     }
 
     // --- Test Initial State ---
