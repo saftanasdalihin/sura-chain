@@ -12,6 +12,7 @@ contract SuraChainTest is Test {
 
     function setUp() public {
         suraChain = new SuraChain();
+        suraChain.openElection();
     }
 
     // --- Test Initial State ---
