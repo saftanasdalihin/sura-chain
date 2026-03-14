@@ -25,21 +25,9 @@ contract SuraChain {
     // --- Constructor ---
     constructor() {
         // Initialize candidates
-        candidates[1] = Candidate({
-            candidateId: 1,
-            candidateAddress: address(0x111),
-            votesReceived: 0
-        });
-        candidates[2] = Candidate({
-            candidateId: 2,
-            candidateAddress: address(0x222),
-            votesReceived: 0
-        });
-        candidates[3] = Candidate({
-            candidateId: 3,
-            candidateAddress: address(0x333),
-            votesReceived: 0
-        });
+        candidates[1] = Candidate({candidateId: 1, candidateAddress: address(0x111), votesReceived: 0});
+        candidates[2] = Candidate({candidateId: 2, candidateAddress: address(0x222), votesReceived: 0});
+        candidates[3] = Candidate({candidateId: 3, candidateAddress: address(0x333), votesReceived: 0});
     }
 
     // --- Events ---
